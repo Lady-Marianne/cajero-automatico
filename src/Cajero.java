@@ -26,6 +26,32 @@ public class Cajero {
         while (opcion != 9) {
             System.out.println(menu);
             opcion = teclado.nextInt();
+            switch (opcion){
+                case 1:
+                    System.out.println("El saldo actualizado es: $ " + saldo + "\n");
+                    break;
+                case 2:
+                    System.out.println("¿Cuál es el valor que desea retirar?");
+                    double valorARetirar = teclado.nextDouble();
+                    if (saldo < valorARetirar) {
+                        System.out.println("Saldo insuficiente\n");
+                    } else {
+                        saldo -= valorARetirar;
+                        System.out.println("El saldo actualizado es: $ " + saldo + "\n");
+                    }
+                    break;
+                case 3:
+                    System.out.println("¿Cuál es el valor que desea depositar?");
+                    double valorADepositar = teclado.nextDouble();
+                    saldo += valorADepositar;
+                    System.out.println("El saldo actualizado es: $ " + saldo + "\n");
+                    break;
+                case 9:
+                    System.out.println("Muchas gracias por utilizar nuestros servicios. \n¡Hasta la vista, Baby!");
+                    break;
+                default:
+                    System.out.println("Opción no válida\n");
+            }
         }
 
     }
