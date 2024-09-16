@@ -47,10 +47,11 @@ public class Cajero {
                     System.out.println("El saldo actualizado es: $ " + saldo + "\n");
                     break;
                 case 9:
-                    System.out.println("Muchas gracias por utilizar nuestros servicios. \n¡Hasta la vista, Baby!");
+                    System.out.println("Gracias por utilizar nuestros servicios. \n¡Hasta la vista, Baby!");
                     break;
                 default:
                     System.out.println("Opción no válida\n");
+                    break;
             }
         }
 
